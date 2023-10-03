@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-import Image from "next/legacy/image"
+import Image from "next/image"
 import { motion } from "framer-motion"
 
 import styles from "./GridImageContainer.module.css"
@@ -55,11 +55,11 @@ const GridImageContainer = ({ img, blur, setBlur }) => {
       <Image 
         className={styles.Image} 
         src= {'/' + img.photo} 
-        layout="fill" 
-        objectFit="cover"
+        fill={true}
         sizes="(max-width: 384px) 50vw,
               (max-width: 600px) 25vw,
-              33vw" 
+              33vw"
+        alt={img.name}      
       />
   </motion.div> 
   )

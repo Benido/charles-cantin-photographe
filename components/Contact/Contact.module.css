@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
 
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
 .contactText, .form, .pictureBottom {
@@ -19,11 +19,16 @@
   text-align: center;
 }
 
-.form { 
+.formContainer {
   width: 60%;
   min-height: 50%;
   max-height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.form { 
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -49,18 +54,30 @@
 }
 
 .form input, .form textarea {
-  margin-top: 1rem;
+  /*margin-top: 1rem;*/
 }
 
 .nameContainer > div {
   width: 100%;  
 }
 
+.pictureContainer {  
+  height: 200px;
+  width: 60%;
+  max-width: 600px;
+  padding: 1rem;
+  position: relative;
+  display: flex
+}
+
 .pictureBottom {
-  height: 100%;
+  /*;
   background-image: url("/images/contact-daria-kraplak-d34DtRp1bqo-unsplash.webp");
   background-size: cover;
-  background-position: bottom;
+  background-position: bottom;*/
+  object-fit: cover;
+  object-position: bottom;
+  margin-top: 2rem;
 }
 
 @media screen and (max-width: 820px) {

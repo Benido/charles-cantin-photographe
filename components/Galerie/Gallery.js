@@ -1,20 +1,18 @@
-import { useState, useEffect } from "react"
-
+import { useState } from "react"
 import Categories from "./Categories"
 import PictureGrid from "./PictureGrid"
-
 import styles from "./Gallery.module.css"
 
-
 const Gallery = ({ photos, titre, corps }) => {
-
   const [categories, setCategories] = useState([])
-
   let photosFiltered = photos
+
+  //sélectionne les photos dont la catégorie correspond à celles séléctionnées par l'utilisateur
   if (categories.length > 0) {
     photosFiltered = photos.filter((pic) => categories.includes(pic.categories[0]))
   }
   
+  //récupère les catégories cliquées par l'utilisateur
   const handleCategories = (e) => {
     if (categories.includes(e.target.value)) {
       setCategories(categories.filter((categorie) => categorie !== e.target.value))
@@ -32,13 +30,11 @@ const Gallery = ({ photos, titre, corps }) => {
     <div className={styles.galleryText}>
       <h1>{titre}</h1>
       <p>{corps}</p>
-      <p>{categories.join(' ')}</p>
     </div>
     <Categories handleCategories={handleCategories} handleReset={() => setCategories([])}/>
     <PictureGrid displayedPhotos={photosFiltered}/>
   </div>
   )
 }
-
 
 export default Gallery
