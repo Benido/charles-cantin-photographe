@@ -17,7 +17,7 @@ const Header = () => {
   return (
   <div className={styles.Header}>
     <a href="/">
-      <img className={styles.Logo} src="assets/logo-transparent.png" alt="logo"/>
+      <img className={styles.Logo} src="/assets/logo-transparent.png" alt="logo"/>
     </a> 
     <Hamburger 
       onClick ={handleClick}

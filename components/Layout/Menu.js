@@ -19,23 +19,23 @@ const Menu = ({ onClick, expanded }) => {
           router.asPath !== "/" && 
           <li>
             <Link href="/">
-              <a>ACCUEIL</a>
+              ACCUEIL
             </Link>
           </li>
         }        
         <li>
           <Link href="/galerie">
-            <a>GALERIE</a>
+            GALERIE
           </Link>
         </li>
         <li>
           <Link href="/prestations">
-            <a>PRESTATIONS</a>
+            PRESTATIONS
           </Link>
         </li>
         <li>
           <Link href="/contact">
-            <a>CONTACT</a>
+            CONTACT
           </Link>
         </li>
       </ul>

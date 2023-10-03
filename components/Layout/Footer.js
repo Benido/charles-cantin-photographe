@@ -5,7 +5,7 @@ import styles from './Footer.module.css'
 const Footer = () => (
   <div className={styles.Footer}>
     <div className={styles.Container}>
-      <img className={styles.Logo} src="assets/logo-transparent.png" alt="Logo"/>
+      <img className={styles.Logo} src="/assets/logo-transparent.png" alt="Logo"/>
       <div className={styles.Adresse}>
         <p>
           12 rue Nicéphore Niépce<br/>
